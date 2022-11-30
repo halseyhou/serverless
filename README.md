@@ -7,16 +7,16 @@ ref: https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
 # with package
 pip install --target ./package boto3
 cd package
-zip -r ../lambda_function.zip .
+zip -r ../main.zip .
 cd ..
-zip lambda_function.zip lambda_function.py
+zip main.zip main.py
 
 ```
 
 ```angular2html
 # without package
 
-zip lambda_function.zip lambda_function.py
+zip main.zip main.py
 ```
 
 upload to s3 manually
