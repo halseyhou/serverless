@@ -9,10 +9,7 @@ def lambda_handler(event, context):
     SENDER = "support@demo.xihou.me"
     RECIPIENT = msg['to']
 
-    DESTINATION = {'ToAddresses': [
-            msg['to'],
-        ]
-    }
+    DESTINATION = {'ToAddresses': [ msg['to'], ] }
 
     SUBJECT = payloads['Subject']
     BODY = msg['content']
