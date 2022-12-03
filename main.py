@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         resp = table.get_item(Key={'email': BODY})
         item = resp.get('Item', {})
         if item:
-            print('The email content has been sent!')
+            print('The email content has already been sent!')
             return {'statusCode': 200, 'body': json.dumps(item)}
         resp = client.send_email(
             Destination=DESTINATION,
