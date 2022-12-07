@@ -4,6 +4,7 @@ from botocore.exceptions import ClientError
 
 
 def lambda_handler(event, context):
+    print('test')
     payloads = event['Records'][0]["Sns"]
     msg = json.loads(payloads['Message'])
     SENDER = "support@demo.xihou.me"
